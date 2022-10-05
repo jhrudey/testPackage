@@ -1,0 +1,44 @@
+---
+title: "examples"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{examples}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(testPackage)
+```
+
+This package creates a list from email data in PDF format. From that list you can create vectors of variables. 
+
+To create a list you run the pdfselect() function on your pdf data
+
+```{r echo=FALSE}
+pdfdata <- system.file("extdata", "testdata.pdf", package = "testPackage")
+```
+
+```{r}
+emaillist <- pdfselect(pdfdata)
+```
+
+From this list you can create vectors of certain variables. This is a vector of the subject of some emails
+
+```{r}
+subject_var(emaillist)
+```
+
+You can also run the emailPDFdf() function directly on your pdf data to create a data frame with the variables of interest
+
+```{r}
+df <- emailPDFdf(pdfdata)
+knitr::kable(df)
+```
