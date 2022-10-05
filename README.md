@@ -24,10 +24,12 @@ The remaining functions are helper functions that create each of the necessary v
 You can install the development version of testPackage like so:
 
 ``` r
-devtools::install_github("jhrudey/testPackage")
+devtools::install_github("jhrudey/testPackage", build_vignettes = TRUE)
 
 library(testPackage)
 ```
+
+build_vignettes needs to be TRUE to load the vignettes
 
 ## Vignette
 
