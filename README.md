@@ -31,6 +31,8 @@ library(testPackage)
 
 ## Vignette
 
+To see examples load the vignette
+
 ``` r
 browseVignettes("testPackage")
 ```
