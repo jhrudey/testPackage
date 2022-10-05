@@ -29,16 +29,10 @@ devtools::install_github("jhrudey/testPackage")
 library(testPackage)
 ```
 
-## Examples
+## Vignette
 
-You can use testdata.pdf to run the entire process of the emailPDFdf() function. 
-
-You can also use the emaillist.Rda in data/ which is a list that has been produced after running testdata.pdf through pdfselect(). You can then
-use this emaillist.Rda to see how each of the following functions works to product an individual variable:
-* subject_var()
-* date_var()
-* from_var()
-* to_var()
-* content_var()
+``` r
+browseVignettes("testPackage")
+```
 
 
